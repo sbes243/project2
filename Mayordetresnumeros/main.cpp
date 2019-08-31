@@ -4,30 +4,9 @@ using namespace std;
 
 int main()
 {
-    int a;
-    int b;
-    int c;
-    cout << "Ingresa el valor de a "  << endl;
-    cin >> a;
-    cout << "Ingresa el valor de b " << endl;
-    cin >> b;
-    cout << "Ingresa el valor de c" << endl;
-    cin >> c;
-    if  (a>=b and a>=c)
-    {
-        cout << "el numero mayor es " << a << endl;
-    }else{
-    if  (b>=a and b>=c )
-        {
-        cout << "El numero mayor es " << b << endl;
-    }else{
-        cout << "El numero mayor es " << c << endl;
-    }
-    }
-    return 0;
+/*
 
-    /*
-int divisor=1;
+    int divisor=1;
    int divisores=0;
    int num;
    cout <<"Ingrese un numero"<<endl;
@@ -45,8 +24,8 @@ int divisor=1;
    }
    else{
     cout<<"No es primo"<<endl;
-   }
-
+   }*/
+/*
    int n=1;
    int divisor=1;
    int divisores=0;
@@ -65,9 +44,25 @@ int divisor=1;
         n++;
         divisores=0;
         divisor=1;
-
-
-
-
    }
+   */
+   int n;
+    cout << "Ingrese un numero : " << endl;
+    cin >>n;
+    int divi=0;
+    int sor=1;
+    while(sor<n){
+        if(n%sor==0){
+            divi=divi+sor;
+        }
+        sor++;
+    }
+    if(divi==n){
+        cout << "Es un numero perfecto" << endl;
+    }
+    else{
+        cout << "No es un numero perfecto" << endl;
+    }
+    return 0;
+
 }
