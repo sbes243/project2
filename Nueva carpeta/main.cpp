@@ -7,6 +7,11 @@ void imprimir(int arr[],int tam){
         cout<<arr[i]<<endl;
     }
 }
+int swap(int &x,int &y){
+ int c=x;
+    x=y;
+    y=c;
+}
 /* main(){
     int x[5];
     for(int i=0;i<5;i++){
@@ -49,24 +54,21 @@ int sumarecursiva(int arr[],int tam,int d=0){
     cout<<sumarecursiva(x,2)<<endl;
     return 0;
 }*/
-void invertir(int arr[],int tam){
+int invertir(int arr[],int tam){
     int v=tam/2;
-    tam-=1;
     for(int i=0;i<v;i++){
-        int c=arr[i];
-        arr[i]=arr[tam];
-        arr[tam--]=c;
-
+        swap(arr[i],arr[tam-1-i]);
     }
 }
-/*void invertirrecursivo(int arr[],int tam){
-
-    if(tam>0){
-    cout<<arr[tam-1]<<endl;
-    invertirrecursivo(arr,tam-1);
-    tam--;
+int invertirrecursivo(int arr[],int tam){
+    if(tam==1){
+    return arr[tam];
 }
-    }*/
+    else{
+        for(int i=0;i<tam/2;i++){
+        }
+    }
+    }
 void ordenarburbuja(int arr[],int tam){
      for(int i=0;i<tam;i++){
          for(int j=0;j<tam-1;j++){
@@ -97,9 +99,8 @@ int main(){
     }
     /*cout<<suma(x,4)<<endl;
     cout<<"la suma recursiva es:"<<sumarecursiva(x,4)<<endl;*/
-    ordenarinsercion(x,4);
+    invertir(x,4);
     imprimir(x,4);
-
     return 0;
 }
 
