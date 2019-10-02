@@ -42,15 +42,15 @@ int invertir(int *arr,int tam){
     }
 }
 int main(){
-    int x[4];
+    int x[5];
     /// [ 5 6 7 8  ]     // tam 4
     /// [ 1 6 7 8  ]     // tam 3
     /// 8+  [ 5 6 7 ]
-    for(int i=0;i<4;i++){
+    for(int i=0;i<5;i++){
         cin>>x[i];
     }
     //cout<<sumarec(x,4);
-    invertir(x,4);
-    imprimir(x,4);
+    invertir(x,5);
+    imprimir(x,5);
 }
 
