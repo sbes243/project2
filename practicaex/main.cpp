@@ -49,7 +49,7 @@ int main(){
     cin>>n;
     cout<< palindromo(n);
 }*/
-/*int calcularfib(int n){
+int calcularfib(int n){
     int x=0;
     int y=1;
     int z=1;
@@ -64,7 +64,7 @@ int main(){
     int n;
     cin>>n;
     cout<<calcularfib(n);
-}*/
+}
 /*bool esnumero(char a){
     int n=static_cast<int>(a);
     return (n>47 and n<58);
