@@ -13,12 +13,12 @@ int swap(int &x,int &y){
     x=y;
     y=c;
 }
-void swap(int *ptr1,int *ptr2){
+/*void swap(int *ptr1,int *ptr2){
     int tmp= *ptr1;
      *ptr1=*ptr2;
      *ptr2=tmp;
 
-}
+}*/
 int suma(int *arr,int tam){
     int sum=0;
     while(tam--){
@@ -41,6 +41,15 @@ int invertir(int *arr,int tam){
         swap(*(arr+(i)),*(arr+(tam-1-i)));
     }
 }
+
+int invertirre(int arr[],int tam,int i=0){
+
+        if( i==tam/2){
+             return 0;
+        }
+        swap(arr[i],arr[tam-i-1]);
+        invertirre(arr,tam,++i);
+}
 int main(){
     int x[5];
     /// [ 5 6 7 8  ]     // tam 4
@@ -50,7 +59,7 @@ int main(){
         cin>>x[i];
     }
     //cout<<sumarec(x,4);
-    invertir(x,5);
+    invertirre(x,5);
     imprimir(x,5);
 }
 
