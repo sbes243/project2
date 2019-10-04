@@ -13,12 +13,12 @@ int swap(int &x,int &y){
     x=y;
     y=c;
 }
-/*void swap(int *ptr1,int *ptr2){
+void swap(int *ptr1,int *ptr2){
     int tmp= *ptr1;
      *ptr1=*ptr2;
      *ptr2=tmp;
 
-}*/
+}
 int suma(int *arr,int tam){
     int sum=0;
     while(tam--){
@@ -42,13 +42,24 @@ int invertir(int *arr,int tam){
     }
 }
 
-int invertirre(int arr[],int tam,int i=0){
+int invertirre(int *arr,int tam,int i=0){
 
         if( i==tam/2){
              return 0;
         }
-        swap(arr[i],arr[tam-i-1]);
+        swap(*(arr+(i)),*(arr+(tam-i-1)));
         invertirre(arr,tam,++i);
+}
+void ordenarburbuja(int *arr,int tam){
+     for(int i=0;i<tam;i++){
+         for(int j=0;j<tam-1;j++){
+            if(*(arr+(j))>*(arr+(j+1))){
+                int *c=+(arr+(j));
+                *(arr+(j))=*(arr+(j+1));
+                *(arr+(j+1))=*c;
+            }
+         }
+         }
 }
 int main(){
     int x[5];
@@ -59,7 +70,7 @@ int main(){
         cin>>x[i];
     }
     //cout<<sumarec(x,4);
-    invertirre(x,5);
+    ordenarburbuja(x,5);
     imprimir(x,5);
 }
 
