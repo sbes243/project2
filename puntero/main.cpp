@@ -51,10 +51,11 @@ int invertirre(int *arr,int tam,int i=0){
         invertirre(arr,tam,++i);
 }
 void ordenarburbuja(int *arr,int tam){
+     int *c;
      for(int i=0;i<tam;i++){
          for(int j=0;j<tam-1;j++){
             if(*(arr+(j))>*(arr+(j+1))){
-                int *c=+(arr+(j));
+                *c=*(arr+(j));
                 *(arr+(j))=*(arr+(j+1));
                 *(arr+(j+1))=*c;
             }
