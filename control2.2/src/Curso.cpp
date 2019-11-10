@@ -2,6 +2,7 @@
 #include <string>
 #include "Estudiante.h"
 #include<iostream>
+#include <vector>
 using namespace std;
 
 Curso::Curso(string _nombre,string _codigo,Estudiante* _alumnos,int _cantidad_a)
@@ -34,13 +35,4 @@ void Curso::cambiar_ca(int nuevo){
 }
 void Curso::cambiar_alu(Estudiante* nuevo){
     alumnos=nuevo;
-}
-void Curso::agregar_a(Estudiante e) {
-	cantidad_a++;
-	Estudiante *al = new Estudiante[cantidad_a];
-	for (int i = 0; i < cantidad_a - 1; i++) {
-		*(al + i) = *(alumnos + i);
-	}
-	*(al + cantidad_a - 1) = e;
-	alumnos = al;
 }

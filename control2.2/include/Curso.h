@@ -20,12 +20,13 @@ class Curso
         string obtener_c();
         Estudiante* obtener_alu();
         int obtener_a();
-        void agregar_a(Estudiante);
+
 
         void cambiar_n(string);
         void cambiar_co(string);
-        void cambiar_alu(Estudiante*);
         void cambiar_ca(int);
+        void cambiar_alu(Estudiante*);
+
 
 
 };

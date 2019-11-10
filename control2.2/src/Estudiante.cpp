@@ -23,3 +23,15 @@ string Estudiante::obtener_n(){
 string Estudiante::obtener_c(){
     return codigo;
 }
+void Estudiante::ingresar(){
+    cin>>nombre;
+    cin>>apellido;
+    cin>>codigo;
+}
+void Estudiante::mostrar(){
+	cout<<"Nombre: "<<nombre<<endl;
+	cout<<"Apellido: "<<apellido<<endl;
+	cout<<"Codigo :"<<codigo<<endl;
+
+}
+

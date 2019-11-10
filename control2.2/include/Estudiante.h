@@ -13,6 +13,8 @@ class Estudiante
     public:
         Estudiante();
         Estudiante(string,string,string);
+        void ingresar();
+        void mostrar();
         string obtener_a();
         string obtener_n();
         string obtener_c();
