@@ -25,17 +25,17 @@ bool mayor(Empleado e1, Empleado e2) {
 }
 void ord(Empleado* emps, int tam) {
 	for (int i = 2; i < tam; i++) {
-		int c = i;
-		Empleado* ptr1 = emps + i;
-		Empleado* ptr = ptr1 - 1;
-		Empleado emp = *ptr1;
-		while (c != 0 && mayor(*ptr, *ptr1)) {
-			*ptr1 = *ptr;
-			c--;
-			ptr1--;
-			ptr--;
+		int d = i;
+		Empleado* puntero1 = emps + i;
+		Empleado* puntero = puntero1 - 1;
+		Empleado emp = *puntero1;
+		while (d != 0 && mayor(*puntero, *puntero1)) {
+			*puntero1 = *puntero;
+			d--;
+			puntero1--;
+			puntero--;
 		}
-		*(ptr + 1) = emp;
+		*(puntero + 1) = emp;
 	}
 }
 int main()
